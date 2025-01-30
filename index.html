@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arjun R Nath's Resume - A modern web design showcasing professional experience and skills.">
+    <title>Arjun R Nath - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="profile">
+                <img src="ArjunNewPhoto2.JPG" alt="Profile Picture" class="profile-img">
+                <h1>Arjun R Nath</h1>
+                <p class="title">Computer Programmer</p>
+                <p class="contact-info">Email: <a href="mailto:arjunrnath2003@gmail.com">arjunrnath2003@gmail.com</a></p>
+                <p class="contact-info">Phone: <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p class="contact-info">LinkedIn: <a href="https://www.linkedin.com/in/arjun-r-nath-03656a244/" target="_blank">linkedin.com/in/arjunrnath</a></p>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>
+                A Computer Science and Engineering student, set to graduate this year, with a solid foundation in Python, C, and Java. Proficient in front-end development using HTML, CSS, JavaScript, and frameworks like React Native and Tkinter. Skilled in building dynamic, interactive user interfaces and functional applications, while ensuring high performance and user-centric design.
+                Eager to apply knowledge and contribute to innovative projects, with a focus on continuous learning and growth. Adaptable to new technologies and excited to collaborate in fast-paced environments that foster creativity and technical excellence.
+            </p>
+        </section>
+
+        <!-- Skills Section with Bar Charts -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skill-set">
+                <div class="skill">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>C</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <h3>Tools & Frameworks</h3>
+                    <ul>
+                        <li>React Native</li>
+                        <li>Tkinter</li>
+                        <li>MySQL</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Chart.js for dynamic bar charts -->
+            <canvas id="skillsChart"></canvas>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Full-Stack Android Developer Intern</h3>
+                <p class="company">Coratia Technologies (Remote), India</p>
+                <p class="company">Duration: 2 months (2024 July 1 - 2024 August 31)</p>
+                <ul>
+                    <li>Gained hands-on experience in full-stack Android development using Kotlin for building dynamic, high-performance mobile applications.</li>
+                    <li>Developed a News App that displayed live news and highlights from various sources, with an emphasis on user-friendly design and seamless functionality.</li>
+                    <li>Integrated Firebase to implement real-time notifications, keeping users updated with important news highlights.</li>
+                    <li>Collaborated with mentors and peers to enhance app features, ensuring smooth navigation and real-time data updates.</li>
+                    <li>Learned best practices for mobile app architecture, debugging, and optimization in Android development.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section class="languages">
+            <h2>Languages</h2>
+            <ul>
+                <li>English (Fluent)</li>
+                <li>Hindi (Fluent)</li>
+                <li>Malayalam (Native)</li>
+            </ul>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Arjun R Nath | All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <!-- Chart.js Script -->
+    <script>
+        // Skills Chart
+        const ctx = document.getElementById('skillsChart').getContext('2d');
+        const skillsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['C', 'Python', 'Java', 'HTML/CSS', 'React Native', 'Tkinter', 'MySQL'],
+                datasets: [{
+                    label: 'Skill Proficiency',
+                    data: [85, 90, 80, 75, 70, 65, 60],
+                    backgroundColor: '#3498db',
+                    borderColor: '#2980b9',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
